@@ -1,5 +1,5 @@
-const notes = ['B', 'A#', 'A', 'G#', 'G', 'F#', 'F', 'E', 'D#', 'D', 'C#', 'C'];
-const chords = [
+const NOTES = ['B', 'A#', 'A', 'G#', 'G', 'F#', 'F', 'E', 'D#', 'D', 'C#', 'C'];
+const CHORDS = [
     'Major', 'Minor', '7', '5', 'dim',
     'dim7', 'aug', 'sus2', 'sus4', 'maj7',
     'm7', '7sus4', 'maj9', 'maj11', 'maj13',
@@ -88,7 +88,7 @@ document.addEventListener('keyup', (event) => {
         if (event.pageX < 0 || event.pageY < 600) {
             posX = event.pageX;
             posY = event.pageY;
-            response = notes[Math.floor(event.pageY / 50)] + ' ' + chords[Math.floor(event.pageX / 30)];
+            response = NOTES[Math.floor(event.pageY / 50)] + ' ' + CHORDS[Math.floor(event.pageX / 30)];
         }
         if (shift === true) {
             console.log(posX, posY, response);
